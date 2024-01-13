@@ -1,4 +1,7 @@
-.App {
+Background{
+  position: absolute;
+}
+.App1 {
   text-align: center;
   display: flex;
   flex-direction: column;

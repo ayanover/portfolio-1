@@ -6,22 +6,23 @@ body, h1, h2, a{
 }
 body{
     padding: 5px;
-    background-color: rgb(80, 76, 76);
+    background-color: rgb(80 76 76 / 80%);
 }
 
 .grid-container{
-    padding: 10px;
+
+    padding-top: 20px;
     display: grid;
-    grid-template-columns: calc(24% - 5px) calc(25% - 5px) calc(25% - 5px) calc(25% - 5px);
-    gap: 10px;
-    width: 60%;
-    height: calc(86vh - 10px);
+    grid-template-columns: calc(24% - 10px) calc(24% - 10px) calc(25% - 10px) calc(25% - 10px);
+    gap: 20px;
+    width: 80%;
+    height: calc(86vh - 20px);
     transition: 0.7s;
 }
 .grid-item{
     width: 100%;
-    background-color: #252323;
-    border-radius: 10px;
+    background-color: rgb(37 35 35 / 60%);
+    border-radius: 5px;
     box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
     height: 100%;
 }

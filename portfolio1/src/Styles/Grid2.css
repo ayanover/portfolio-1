@@ -10,18 +10,18 @@ body{
 }
 
 .grid2-container{
-    padding: 10px;
+    padding-top:20px;
     display: grid;
-    grid-template-columns: calc(24% - 5px) calc(25% - 5px) calc(25% - 5px) calc(25% - 5px);
+    grid-template-columns: calc(24% - 10px) calc(24% - 10px) calc(25% - 10px) calc(25% - 10px);
     grid-template-rows: 12% 20% 20%;
-    gap: 10px;
-    width: 60%;
-    height: 100vh;
+    gap: 20px;
+    width: 80%;
+    height: calc(100vh - 20px);
     transition: 0.7s;
 }
 .grid2-item{
     width: 100%;
-    background-color: #252323;
+    background-color: rgb(37 35 35 / 60%);
     border-radius: 10px;
     box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
     height: 100%;
@@ -29,13 +29,14 @@ body{
 }
 
 .main-item{
+    display: flex;
+    padding-top: 15px;
     height: auto;
     grid-row: 1;
     grid-column: 1 / span 4;
     & h1 {
         height: 100%;
         width: 100%;
-        font-family: 'Monoton';
         color: #e1e0bf;
         font-size: 3vw;
         text-align: center;
