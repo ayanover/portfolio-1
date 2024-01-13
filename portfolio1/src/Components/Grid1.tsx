@@ -1,6 +1,5 @@
 import '../Styles/Grid1.css';
-
-function Grid1() : JSX.Element {
+function Grid1() {
     return (
         <div className='grid-container'>
             <div className='grid-item left-item'>
