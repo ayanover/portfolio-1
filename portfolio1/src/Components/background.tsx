@@ -50,6 +50,11 @@ export default function background(){
         scene.background = new THREE.Color(0x1111)
         scene.add( sphere );
 
+        function handleWindowResize(){
+            camera.aspect = window.innerWidth/window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight)
+        }
         const handleScroll = () => {
             // Update your Three.js animation based on scroll position
             const scrollPosition = window.scrollY;
@@ -71,6 +76,7 @@ export default function background(){
         camera.position.z = 5;
         camera.position.x = -6;
         function animate(){
+            window.addEventListener('resize', handleWindowResize, false)
             window.addEventListener('scroll', handleScroll);
             requestAnimationFrame( animate );
             sphere.rotation.x += 0.001;

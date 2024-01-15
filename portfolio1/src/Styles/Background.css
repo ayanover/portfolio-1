@@ -10,9 +10,7 @@
 
 @media (max-width: 768px) {
     .container{
-        opacity: 90%;
-        left: -300px;
-        transition: 2s;
+        opacity: 80%;
     }
 }
 
