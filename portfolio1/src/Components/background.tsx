@@ -60,11 +60,11 @@ export default function background(){
             const scrollPosition = window.scrollY;
             if(scrollPosition > prevScrollY.current){
                 camera.position.y -= 0.1;
-                window.scrollBy(0, 10)
+                window.scrollBy(0, 0.1)
             }
             else if(scrollPosition < prevScrollY.current){
                 camera.position.y += 0.1;
-                window.scrollBy(0, -10)
+                window.scrollBy(0, -0.1)
             }
             else{
 
