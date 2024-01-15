@@ -56,7 +56,8 @@ hr {
     justify-content: center;
 }
 .left-item{
-    animation: 1s ease-out 1s 1 LoadContent;
+    opacity: 0;
+    animation: 1s ease-out 1s 1 LoadContent forwards;
     color: #d7cbd4;
     display: flex;
     align-items: center;
@@ -64,7 +65,7 @@ hr {
     grid-row: 1 / span 2;
     grid-column: 1 / span 2;
     & .about-section{
-        height: 15%;
+        height: 10%;
     }
     & .list-container{
         height: 65%;
@@ -77,7 +78,7 @@ hr {
         padding: 20px 20px 10px 20px;
     }
     & h2{
-        font-size: 1.3em;
+        font-size: 1.3rem;
         padding: 0 45px 45px 45px ;
         color: white;
         float: left;
@@ -104,7 +105,18 @@ hr {
         transform: scale(1.1);
     }
 }
+@media (min-width: 1500px){
+    .left-item{
+        & h2{
+            font-size: 2rem;
+        }
+        & button {
 
+            bottom: 10px;
+            font-size: 1.4rem;
+        }
+    }
+}
 @media (max-width: 768px) {
     .grid-container{
         height: auto;
@@ -130,11 +142,10 @@ hr {
     0%{
         animation-delay: 1s;
         transform: translateX(+500px);
-        visibility: hidden;
     }
     100%{
         transform: translateX(0);
-        visibility: visible;
+        opacity: 100%;
     }
 
 }

@@ -67,6 +67,7 @@ export default function background(){
             prevScrollY.current = scrollPosition;
 
         };
+        camera.position.y = 2;
         camera.position.z = 5;
         camera.position.x = -6;
         function animate(){
