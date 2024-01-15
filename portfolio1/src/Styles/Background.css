@@ -3,4 +3,16 @@
     z-index: -1;
     left: 0;
     top: 0;
+    transition: 2s;
+    width: 300vw;
+    background-color: #111111;
 }
+
+@media (max-width: 768px) {
+    .container{
+        opacity: 90%;
+        left: -300px;
+        transition: 2s;
+    }
+}
+
