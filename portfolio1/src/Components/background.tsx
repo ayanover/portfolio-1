@@ -3,7 +3,6 @@ import { useEffect, useRef } from "react";
 import '../Styles/Background.css'
 export default function background(){
     const refContainer = useRef(null);
-    const prevScrollY = useRef(0);
     useEffect(() => {
         const scene = new THREE.Scene()
         const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
@@ -55,29 +54,12 @@ export default function background(){
             camera.updateProjectionMatrix();
             renderer.setSize(window.innerWidth, window.innerHeight)
         }
-        const handleScroll = () => {
-            // Update your Three.js animation based on scroll position
-            const scrollPosition = window.scrollY;
-            if(scrollPosition > prevScrollY.current){
-                camera.position.y -= 0.1;
-                window.scrollBy(0, 0.1)
-            }
-            else if(scrollPosition < prevScrollY.current){
-                camera.position.y += 0.1;
-                window.scrollBy(0, -0.1)
-            }
-            else{
 
-            }
-            prevScrollY.current = scrollPosition;
-
-        };
         camera.position.y = 2;
         camera.position.z = 5;
-        camera.position.x = -6;
+        camera.position.x = -7;
         function animate(){
             window.addEventListener('resize', handleWindowResize, false)
-            window.addEventListener('scroll', handleScroll);
             requestAnimationFrame( animate );
             sphere.rotation.x += 0.001;
             sphere.rotation.y += 0.001;
