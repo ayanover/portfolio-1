@@ -9,8 +9,8 @@ function Grid2() {
             </div>
             <div className='grid2-item left-top-item'>asd</div>
             <div className='grid2-item left-bottom-item'>asd</div>
-            <div className='grid2-item right-item'>asd</div>
-            <div className='grid2-item '>asd</div>
+            <div className='grid2-item right-top-item'>asd</div>
+            <div className='grid2-item right-bottom-item'>asd</div>
         </div>
     );
 }
