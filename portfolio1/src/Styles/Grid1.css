@@ -55,6 +55,18 @@ hr {
     width: 100%;
     display: flex;
     justify-content: center;
+    & button{
+        margin: 20px;
+    }
+}
+.small-button{
+    color: #dcc2c2;
+    background-color: transparent;
+    box-shadow: none;
+    text-decoration: underline;
+    & :hover{
+        border: none;
+    }
 }
 .left-item{
     opacity: 0;
@@ -121,10 +133,10 @@ hr {
 }
 @media (min-width: 1700px){
     .grid-container{
-        height: calc(86vh - 20px);
+        height: calc(86vh - 40px);
         width: 80%;
         grid-template-columns: calc(30% - 10px) calc(30% - 10px);
-        grid-template-rows: calc(50% - 15px) calc(50% - 15px);
+        grid-template-rows: 100% 0;
     }
     .right-top-item1{
         font-size: 1.5rem;
@@ -137,18 +149,29 @@ hr {
         visibility: hidden;
     }
     .left-item{
+
         .about-section{
+            width: 100%;
+            & h1{
+                padding: 20px 50px 20px 50px;
+                margin: 0;
+                width: 100%;
+                background-color: white;
+            }
             height: auto;
         }
-        grid-row: 1 / span 1;
-        grid-column: 1 / span 2;
         & h2{
-            font-size: 1.4rem;
+            padding: 50px;
+            font-size: 1.8rem;
         }
         & button {
-            bottom: 15px;
-            position: absolute;
-            font-size: 1.4rem;
+            margin: 50px 50px 0px 50px;
+            font-size: 1.8rem;
+            padding: 10px;
+        }
+        & .small-button{
+            font-size: 1.3rem;
+            margin-top: 10px;
         }
     }
 }

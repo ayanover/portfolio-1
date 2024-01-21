@@ -1,9 +1,10 @@
 import '../Styles/Header.css';
+import Ppic from '../Images/ppic.webp';
 function Header() {
   return (
       <div className='header-container'>
           <div className='header-photo'>
-              <img src='#' alt='' />
+              <img src={Ppic} alt='photo' />
           </div>
           <div className='header-name'>
               <h1>Jakub Grych</h1>

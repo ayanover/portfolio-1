@@ -1,6 +1,27 @@
 import '../Styles/Grid1.css';
-function Grid1() {
-    return (
+import { useState, useEffect } from 'react';
+    function Grid1() {
+        const [] = useState<number>(0);
+        const handleScroll = () => {
+            //setScrollPosition(window.scrollY);
+        };
+
+        const scrollToSection = (sectionY: number) => {
+            window.scrollTo({
+                top: sectionY,
+                behavior: 'smooth',
+            });
+        };
+
+        useEffect(() => {
+            window.addEventListener('scroll', handleScroll);
+
+            return () => {
+                window.removeEventListener('scroll', handleScroll);
+            };
+        }, []);
+
+        return (
         <div className='grid-container'>
             <div className='grid-item left-item'>
                 <div className='about-section'>
@@ -9,44 +30,10 @@ function Grid1() {
                 <hr/>
                 <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id lacinia purus, sed condimentum lacus. Ut a ex ut tortor facilisis lacinia ac id tellus. Etiam faucibus tortor ligula, condimentum mattis risus ultricies quis.Suspendisse potenti. Curabitur at semper arcu. Cras id turpis ipsum.</h2>
                 <div className='button-container'>
-                    <button className='grid-button contact-button'> Contact Me </button>
+                    <button onClick={() => scrollToSection(2600)} className='grid-button contact-button'> Contact Me </button>
                 </div>
+                <button onClick={() => scrollToSection(1600)} className='small-button'>See my projects</button>
             </div>
-            <div className='grid-item right-top-item1'>
-                <div className='about-section'>
-                    <h1> My Stack </h1>
-                </div>
-                <hr/>
-                <div className='list-container'>
-                    <ul>
-                        <li> React </li>
-                        <li> Tailwind </li>
-                        <li> Three.js </li>
-                        <li> Node.js </li>
-                    </ul>
-                </div>
-                <div className={'button-container'}>
-                    <button className='grid-button'> View more </button>
-                </div>
-            </div>
-            <div className='grid-item right-top-item2'>
-                <div className='about-section'>
-                    <h1> My Stack </h1>
-                </div>
-                <hr/>
-                <div className='list-container'>
-                    <ul>
-                        <li> React </li>
-                        <li> Tailwind </li>
-                        <li> Three.js </li>
-                        <li> Node.js </li>
-                    </ul>
-                </div>
-                <div className={'button-container'}>
-                    <button className='grid-button'> View more </button>
-                </div>
-            </div>
-            <div className='grid-item right-bottom-item'></div>
         </div>
     );
 }

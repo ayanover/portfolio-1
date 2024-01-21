@@ -10,14 +10,11 @@ body, h1, h2, a{
     font-family: 'Poppins';
     animation: 1.3s ease-out 0.5s 1 Load forwards;
     height: calc(18vh - 20px);
-    margin-top: 10px;
+    margin-top: 30px;
     color: #d7cbd4;
-    /*background-color: rgba(37, 33, 33, 0.6);*/
-    border-radius: 3px;
-    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
     width: 90%;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
     display: flex;
     flex-direction: row;
     transition: 0.7s;
@@ -28,11 +25,21 @@ body, h1, h2, a{
     }
 }
 .header-photo{
-    width: 10%;
-    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 90%;
+    overflow: hidden;
+    border-radius: 10px;
+    & img{
+        width: 150px;
+        overflow: hidden;
+    }
 }
 .header-name{
-    width: 70%;
+    margin: 70px;
+    width: 65%;
     height: 80%;
     display: flex;
     flex-direction: column;
@@ -50,15 +57,20 @@ body, h1, h2, a{
 @media(max-width: 768px){
     .header-container{
         transition: 0.7s;
+        width: 95%;
         max-height: 30%;
     }
 
     .header-photo{
-        visibility: hidden;
-        width: 0;
+        width: 20%;
+        overflow: hidden;
+        & img{
+            height: 50px;
+            width: 100%;
+        }
     }
     .header-name{
-        width: 80%;
+        width: 60%;
         & h1{
             font-size: 2em;
         }
@@ -70,7 +82,7 @@ body, h1, h2, a{
 
 @keyframes Load{
     0%{
-        opacity: 0;
+        opacity: 0%;
         width: 50%;
         animation-delay: 1s;
     }
