@@ -57,7 +57,7 @@ export default function background(){
 
         camera.position.y = 2;
         camera.position.z = 5;
-        camera.position.x = -6;
+        camera.position.x = -7;
         function animate(){
             window.addEventListener('resize', handleWindowResize, false)
             requestAnimationFrame( animate );
