@@ -17,7 +17,7 @@ body, h1, h2, a{
     box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
     width: 90%;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     display: flex;
     flex-direction: row;
     transition: 0.7s;
@@ -89,14 +89,14 @@ body, h1, h2, a{
 @media(max-width: 768px){
     .header-container{
         transition: 0.7s;
-        width: 95%;
         max-height: 30%;
     }
     .header-photo{
-        width: 20%;
+        visibility: hidden;
+        width: 0;
     }
     .header-name{
-        width: 60%;
+        width: 80%;
         & h1{
             font-size: 2em;
         }
@@ -114,7 +114,7 @@ body, h1, h2, a{
 
 @keyframes Load{
     0%{
-        opacity: 0%;
+        opacity: 0;
         width: 50%;
         animation-delay: 1s;
     }
