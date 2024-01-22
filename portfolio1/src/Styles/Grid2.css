@@ -1,4 +1,4 @@
-body, h1, h2, a{
+body, h1, h2{
     margin: 0;
     padding: 0;
     display: flex;
@@ -19,13 +19,41 @@ body{
     height: calc(100vh - 20px);
     transition: 0.7s;
 }
+.photo-item:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+    cursor: pointer;
+}
 .grid2-item{
+    color: white;
     width: 100%;
-    background-color: rgb(37 35 35 / 60%);
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
     height: 100%;
     min-height: 0;
+    font-family: 'Poppins';
+    & h1{
+        background-image: linear-gradient(to bottom right, red , rebeccapurple);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 2.8rem;
+        padding: 20px 20px 0 20px;
+    }
+    & h2{
+        font-size: 1rem;
+        padding: 20px;
+    }
+    & button{
+        margin-left: 20px;
+        font-family: 'Poppins-Bold';
+        background-image: linear-gradient(to bottom right, rgba(255, 0, 0, 0.78), rgba(102, 51, 153, 0.8));
+        color: white;
+        width: 30%;
+    }
+    & a{
+        text-decoration: none;
+        color: white;
+    }
 }
 
 .main-item{
@@ -47,6 +75,8 @@ body{
     }
 }
 .left-top-item{
+    background-image: url('../Images/clinica.png');
+    background-size: cover;
     grid-row: 2 / span 2;
     grid-column: 1 / span 2;
 }
@@ -54,13 +84,15 @@ body{
     grid-row: 2 / span 2;
     grid-column: 3 / span 2;
 }
-.right-top-item1{
+.left-bottom-item{
+    grid-row: 4 / span 2;
+    grid-column: 1 / span 2;
 
 }
 
 .right-bottom-item{
     grid-column: 3 / span 2;
-    grid-row: 3 / span 2;
+    grid-row: 4 / span 2;
 }
 
 @media (max-width: 768px) {

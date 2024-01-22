@@ -14,10 +14,10 @@ body{
     padding-top: 20px;
     display: grid;
     width: 80%;
+    min-height: 450px;
     grid-template-columns: calc(30% - 10px) calc(30% - 10px);
-    grid-template-rows: calc(50% - 15px) calc(25% - 7px) calc(25% - 8px);
-    gap: 20px;
-    height: calc((86vh - 20px) * 2);
+    grid-template-rows: 100% 0 0;
+    height: calc(86vh - 20px);
     transition: 0.7s;
     & h1{
         background-image: linear-gradient(to bottom right, red , rebeccapurple);
@@ -73,22 +73,16 @@ hr {
     animation: 1s ease-out 1s 1 LoadContent forwards;
     color: #d7cbd4;
     display: flex;
-    align-items: center;
     flex-direction: column;
-    grid-row: 1 / span 1;
     grid-column: 1 / span 2;
     & .about-section{
         height: auto;
-    }
-    & .list-container{
-        height: 65%;
-        background-color: white;
     }
     & h1 {
         max-width: 500px;
         width: auto;
         font-size: 2.5rem;
-        padding: 20px 20px 10px 20px;
+        padding: 20px 20px 10px 45px;
     }
     & h2{
         font-size: 1.3rem;
@@ -96,40 +90,16 @@ hr {
         color: white;
         float: left;
     }
-}
-.right-top-item1{
-    grid-column: 2 / span 1;
-    grid-row: 2 / span 1;
-    & h1{
-        font-size: 2.5rem;
-        padding: 10px 10px 0 20px;
+    & button{
+        margin: 5px;
     }
-    font-size: 1.3rem;
-    color: white;
-}
-.right-top-item2{
-    & h1{
-        font-size: 2.5rem;
-        padding: 10px 10px 0 20px;
-    }
-    font-size: 1.3rem;
-    color: white;
-    grid-column: 1 / span 1;
-    grid-row: 2 / span 1;
 }
 
-.right-bottom-item{
-    grid-column: 1 / span 1;
-    grid-row: 3 / span 1;
-}
 .grid-button{
     font-family: 'Poppins-Bold';
     background-image: linear-gradient(to bottom right, rgba(255, 0, 0, 0.78), rgba(102, 51, 153, 0.8));
     color: white;
-    width: 80%;
-    :hover{
-        transform: scale(1.1);
-    }
+    width: 85%;
 }
 @media (min-width: 1700px){
     .grid-container{
@@ -138,18 +108,8 @@ hr {
         grid-template-columns: calc(30% - 10px) calc(30% - 10px);
         grid-template-rows: 100% 0;
     }
-    .right-top-item1{
-        font-size: 1.5rem;
-    }
-    .right-top-item2{
-        font-size: 1.5rem;
-    }
 
-    .right-bottom-item{
-        visibility: hidden;
-    }
     .left-item{
-
         .about-section{
             width: 100%;
             & h1{
@@ -184,35 +144,38 @@ hr {
         flex-direction: column;
     }
     .left-item{
-        background-color: white;
+        padding: 0;
+        margin: 0;
         height: calc(82vh - 20px);
+        min-height: 450px;
         & h1{
-            padding: 10px;
+            font-size: 2rem;
+            padding: 5px 0 5px 20px;
             margin: 0;
         }
         & h2{
-            font-size-adjust: fill;
+            font-size: 1.2rem;
             padding: 0 20px 20px 20px;
-
+        }
+        & button{
+            margin: 10px;
+        }
+        & .small-button{
+            padding: 0;
+            margin: 0;
         }
     }
     .grid-item{
         width: 100%;
-
     }
     .button-container{
-        padding-bottom: 20px;
-    }
-    hr{
-        width: 90%;
-
     }
 }
 
 @keyframes LoadContent {
     0%{
         animation-delay: 1s;
-        transform: translateX(+500px);
+        transform: translateX(+300px);
     }
     100%{
         transform: translateX(0);

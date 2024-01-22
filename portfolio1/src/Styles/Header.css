@@ -6,7 +6,7 @@ body, h1, h2, a{
 }
 
 .header-container{
-    visibility: hidden;
+    opacity: 0;
     font-family: 'Poppins';
     animation: 1.3s ease-out 0.5s 1 Load forwards;
     height: calc(18vh - 20px);
@@ -28,8 +28,8 @@ body, h1, h2, a{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 140px;
-    height: 90%;
+    width: 130px;
+    height: 130px;
     overflow: hidden;
     border-radius: 10px;
     & img{
@@ -56,23 +56,25 @@ body, h1, h2, a{
 
 @media(max-width: 768px){
     .header-container{
+        margin-top: 10px;
+        padding: 0;
         transition: 0.7s;
-        width: 95%;
-        max-height: 30%;
+        width: 100%;
+        height: 20vh;
     }
 
     .header-photo{
-        width: 20%;
+        width: 110px;
+        height: 90%;
         overflow: hidden;
-        & img{
-            height: 50px;
-            width: 100%;
-        }
     }
     .header-name{
+        padding: 10px;
+        margin: 0;
         width: 60%;
         & h1{
             font-size: 2em;
+            padding-left:0;
         }
         & h2{
             font-size: 0.8em;
@@ -82,12 +84,11 @@ body, h1, h2, a{
 
 @keyframes Load{
     0%{
-        opacity: 0%;
-        width: 50%;
         animation-delay: 1s;
+        transform: translateX(+300px);
     }
     100%{
-        width: 90%;
-        visibility: visible;
+        transform: translateX(0);
+        opacity: 100%;
     }
 }

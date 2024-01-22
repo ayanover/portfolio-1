@@ -5,6 +5,7 @@
     top: 0;
     transition: 2s;
     width: 300vw;
+    min-height: 500px ;
     background-color: #111111;
 }
 

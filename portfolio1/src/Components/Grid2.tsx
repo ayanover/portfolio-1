@@ -7,9 +7,16 @@ function Grid2() {
                 <h1>My Projects</h1>
                 <hr/>
             </div>
-            <div className='grid2-item left-top-item'>asd</div>
-            <div className='grid2-item left-bottom-item'>asd</div>
-            <div className='grid2-item right-top-item'>asd</div>
+            <a href={'http://www.clinicaoptika.pl/'}></a>
+            <div className='grid2-item left-top-item photo-item'><a href={'http://www.clinicaoptika.pl/'}></a></div>
+
+            <div className='grid2-item left-bottom-item'></div>
+            <div className='grid2-item right-top-item'>
+                <h1>Clinica Optika</h1>
+                <hr/>
+                <h2> Mały projekt dla salonu optycznego zrealizowany we współpracy z <a href={'http:'}>Adrian Goral</a></h2>
+                <button> Czytaj więcej </button>
+            </div>
             <div className='grid2-item right-bottom-item'>asd</div>
         </div>
     );
