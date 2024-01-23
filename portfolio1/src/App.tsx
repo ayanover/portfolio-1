@@ -1,8 +1,9 @@
 import './App.css'
 import Background from "./Components/background.tsx";
-import Grid1 from './Components/Grid1.tsx'
+import AboutSection from './Components/AboutSection.tsx'
 import Header from './Components/Header.tsx'
-import Grid2 from './Components/Grid2.tsx'
+import ProjectSection from './Components/ProjectSection.tsx'
+import ContactSection from "./Components/ContactSection.tsx";
 
 function App() {
   return (
@@ -11,9 +12,11 @@ function App() {
         <div className={'Container'}>
             <Header/>
             <div className='spacer'></div>
-            <Grid1/>
+            <AboutSection/>
             <div className='spacer'></div>
-            <Grid2/>
+            <ProjectSection/>
+            <div className='spacer'></div>
+            <ContactSection/>
         </div>
     </>
   )
