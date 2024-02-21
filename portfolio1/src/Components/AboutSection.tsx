@@ -28,7 +28,7 @@ import { useState, useEffect } from 'react';
                     <h1>About Me</h1>
                 </div>
                 <hr/>
-                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id lacinia purus, sed condimentum lacus. Ut a ex ut tortor facilisis lacinia ac id tellus. Etiam faucibus tortor ligula, condimentum mattis risus ultricies quis.Suspendisse potenti. Curabitur at semper arcu. Cras id turpis ipsum.</h2>
+                <h2>I am an ambitious student who is willing to try new things. I am currently working on creating a few template websites for my portfolio as well as mastering my skills in object oriented programming using C#. My stack consists of: React, MongoDB, Figma, C# and others. <br/><br/> DISCLAIMER: This site is still in development, many features are yet to be introduced </h2>
                 <div className='button-container'>
                     <button onClick={() => scrollToSection('contact-section-container')} className='grid-button contact-button'> Contact Me </button>
                 </div>
