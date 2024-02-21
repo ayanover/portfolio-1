@@ -44,6 +44,7 @@ const MailingForm: React.FC = () => {
                 <h1> Name: </h1>
                 <input
                     type="text"
+                    id="name"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
@@ -52,7 +53,9 @@ const MailingForm: React.FC = () => {
             <div className={'input'}>
                 <h1> Email: </h1>
                 <input
-                    type="email"
+                    type="text"
+                    id="email"
+                    name="email"
                     value={formData.email}
                     onChange={handleChange}
                 />
@@ -60,10 +63,13 @@ const MailingForm: React.FC = () => {
             <div className={'input'}>
                 <h1> Message: </h1>
                 <textarea
+                    id="message"
+                    name="message"
                     value={formData.message}
+                    onChange={handleChange}
                 />
             </div>
-            <button type="submit">Submit</button>
+            <button className={'submit-button'} type="submit">Submit</button>
         </form>
     );
 };

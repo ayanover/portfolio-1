@@ -1,9 +1,16 @@
-.contact-section-container{
-    margin-top: 60px;
+.cococontainer{
     font-family: Poppins;
+    width: 100vw;
+
+}
+
+.contact-section-container{
+    box-shadow: 0 0 50px black;
+    background: linear-gradient(to top left, #100f0f, rgb(23, 22, 22));
+    margin-top: 60px;
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 100%;
     &ul{
         list-style-type: none;
     }
@@ -24,26 +31,46 @@ h4{
         font-size: 3.1rem;
         padding: 20px 20px 0 20px;
     }
+    & h3{
+        background-image: linear-gradient(to bottom right, red , rebeccapurple);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 }
 
 .form-container{
+    justify-content: center;
+    align-items: center;
     display: flex;
     width: 95%;
-    height: 500px;
+    height: auto;
     padding: 20px;
 }
 .mail-form{
     height: 100%;
     width: 48%;
-    background-color: #1a1a1a;
+
 }
 .or{
     width: 4%;
+
 }
 .phone-number{
     height: 100%;
     width: 48%;
-    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    & h1{
+        font-size: 4rem;
+        padding-right: 150px;
+    }
+    & h3{
+        font-size: 2.5rem;
+        padding-right: 100px;
+    }
+
 }
 .social-links{
     margin-top: 50px;
