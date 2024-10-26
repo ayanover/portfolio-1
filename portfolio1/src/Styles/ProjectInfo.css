@@ -1,0 +1,12 @@
+.popup{
+    margin: 2.5vh 2.5vw 2.5vh 2.5vw;
+    width: 95vw;
+    height: 95vh;
+    border-radius: 15px;
+    background-color: rgba(74, 25, 25, 0.3);
+    backdrop-filter: blur(15px);
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+}

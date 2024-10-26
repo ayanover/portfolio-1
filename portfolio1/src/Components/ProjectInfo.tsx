@@ -1,27 +1,17 @@
-import '../Styles/ProjectSection.css';
+import '../Styles/ProjectInfo.css';
 
-export default function ProjectInfo(){
+interface ProjectInfoProps {
+    onClose: () => void;
+}
+const ProjectInfo: React.FC<ProjectInfoProps> = ({onClose}) => {
     return (
-        <div className='grid2-container'>
-            <div className=' main-item'>
-                <h1>My Projects</h1>
-                <hr/>
-            </div>
-            <a href={'http://www.clinicaoptika.pl/'}></a>
-            <div className='grid2-item left-top-item photo-item'><a href={'http://www.clinicaoptika.pl/'}></a></div>
-            <div className='grid2-item right-top-item text-item'>
-                <h1>Clinica Optika</h1>
-                <hr/>
-                <h2> A Small project for an optic store in cooperation with <a href={'http:'}>Adrian Goral</a></h2>
-                <button> Read More </button>
-            </div>
-            <div className='grid2-item left-bottom-item photo-item'><a href={'http://www.clinicaoptika.pl/'}></a></div>
-            <div className='grid2-item right-bottom-item text-item'>
-                <h1>Clinica Optika</h1>
-                <hr/>
-                <h2> A Small project for an optic store in cooperation with <a href={'http:'}>Adrian Goral</a></h2>
-                <button> Read More </button>
+        <div className="popup">
+            <span className="close" onClick={onClose}>&times;</span>
+            <div className="popup-content">
+                {/* Your popup content goes here */}
             </div>
         </div>
     );
 }
+
+export default ProjectInfo

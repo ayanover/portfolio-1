@@ -28,7 +28,7 @@ function ContactSection() {
                     <li><a className={'social-link'} href={'https://www.linkedin.com/in/jakub-grych-039540197/'} target="_blank" rel="noopener noreferrer"><img src={twitter} alt={'twitter'}/></a></li>
                     <li><a className={'social-link'} href={'https://www.linkedin.com/in/jakub-grych-039540197/'} target="_blank" rel="noopener noreferrer"><img src={linkedin} alt={'linkedin'}/></a></li>
                 </ul>
-                <h4>© Jakub Grych 2023-2024</h4>
+                <h4>© Jakub Grych 2023-2024 All rights reserved</h4>
             </div>
         </div>
 

@@ -11,16 +11,20 @@ body{
 
 .grid2-container{
 
-    margin:0 0 40px 0;
+    margin:40px 0 80px 0;
     display: grid;
-    grid-template-columns: calc(22% - 10px) calc(22% - 10px) calc(22% - 10px) calc(22% - 10px);
+    grid-template-columns: calc(17% - 10px) calc(17% - 10px) calc(17% - 10px) calc(17% - 10px);
     grid-template-rows: 10% 20% 15% 20% 15%;
     gap: 40px;
-    width: 75%;
+    width: 100%;
+    justify-content: center;
     height: calc(100vh - 20px);
+    min-height: 500px;
     transition: 0.7s;
 }
 .photo-item{
+    box-shadow: 0 0 10px black;
+    padding: 10px;
     opacity: 0;
     animation: 1s ease-out 1s 1 LoadLeftContent forwards;
     transition: 0.4s;
@@ -30,11 +34,13 @@ body{
     }
 }
 .text-item{
-    opacity: 0;
+    box-shadow: 0 0 50px black;
+    background-color: rgba(67, 67, 67, 0.1);
+    backdrop-filter: blur(3px);
+    padding: 10px;
     animation: 1s ease-out 1s 1 LoadRightContent forwards;
     & hr{
         width: 95%;
-
     }
 }
 .photo-item:hover{

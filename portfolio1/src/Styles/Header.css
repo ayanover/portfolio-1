@@ -1,20 +1,20 @@
 body, h1, h2, a{
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
 }
 
 .header-container{
-    opacity: 0;
+    margin-left: 17%;
     font-family: 'Poppins';
     animation: 1.3s ease-out 0.5s 1 Load forwards;
-    height: calc(18vh - 20px);
+    height: calc(22vh - 20px);
     margin-top: 30px;
+    background-color: rgba(67, 67, 67, 0.1);
+    backdrop-filter: blur(3px);
     color: #d7cbd4;
-    width: 90%;
+    width: 44%;
+    border-radius: 10px;
     align-items: center;
-    justify-content: center;
     display: flex;
     flex-direction: row;
     transition: 0.7s;

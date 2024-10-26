@@ -5,8 +5,9 @@
 }
 
 .contact-section-container{
-    box-shadow: 0 0 50px black;
-    background: linear-gradient(to top left, #100f0f, rgb(23, 22, 22));
+    box-shadow: 0 0 10px black;
+    background: linear-gradient(to top left, rgba(16, 15, 15, 0.3), rgba(23, 22, 22, 0.3));
+    backdrop-filter: blur(5px);
     margin-top: 60px;
     display: flex;
     flex-direction: column;
